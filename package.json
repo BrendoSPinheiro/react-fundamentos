@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Brendo Souza Pinheiro <brendo.spinheiro@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "yarn babel src -d build"
+  },
   "devDependencies": {
     "@babel/cli": "^7.14.3",
     "@babel/core": "^7.14.3",
