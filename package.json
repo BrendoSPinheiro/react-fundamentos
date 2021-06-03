@@ -5,7 +5,8 @@
   "author": "Brendo Souza Pinheiro <brendo.spinheiro@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "dev": "webpack serve"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
