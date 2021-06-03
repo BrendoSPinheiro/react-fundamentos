@@ -7,8 +7,9 @@ module.exports = {
   entry: path.resolve(__dirname, 'src', 'index.js'),
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'bundle[hash].js',
+    filename: 'bundle[fullhash].js',
   },
+  mode: 'development',
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public', 'index.html'),
