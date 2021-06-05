@@ -1,12 +1,12 @@
 import React from 'react';
 
-export function Post() {
+export function Post(props) {
   return (
     <>
       <article>
-        <strong>Título do post</strong>
+        <strong>{props.title}</strong>
         <br />
-        <small>Subtítulo do post</small>
+        <small>{props.subtitle}</small>
       </article>
       <br />
     </>
