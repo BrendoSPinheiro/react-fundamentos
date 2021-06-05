@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Post } from './Post';
+import { Header } from './Header';
 
 export function App() {
   const posts = [
@@ -23,14 +24,15 @@ export function App() {
 
   return (
     <>
-      <h1>Brendo's Blog</h1>
-      <h2>Posts da semana</h2>
+      <Header title="Brendo's Blog">
+        <h2>Posts da semana</h2>
+      </Header>
 
       <hr />
 
-      <Post title={posts[0].title} subtitle={posts[0].subtitle} />
-      <Post title={posts[1].title} subtitle={posts[1].subtitle} />
-      <Post title={posts[2].title} subtitle={posts[2].subtitle} />
+      {posts.map((post) => (
+        <Post key={post.id} post={post} />
+      ))}
     </>
   );
 }
