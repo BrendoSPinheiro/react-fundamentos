@@ -27,7 +27,7 @@ export function App() {
 
   return (
     <>
-      <Header title="Brendo's Blog">
+      <Header title="Blog do Brendo">
         <h2>Posts da semana</h2>
       </Header>
 

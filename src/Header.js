@@ -11,6 +11,10 @@ export function Header(props) {
 }
 
 Header.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   children: PropTypes.node,
+};
+
+Header.defaultProps = {
+  title: `Brendo's Blog`,
 };
