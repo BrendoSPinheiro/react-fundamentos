@@ -3,28 +3,25 @@ import React from 'react';
 import { Post } from './Post';
 import { Header } from './Header';
 
-export function App() {
-  const posts = [
-    {
-      id: 1,
-      title: 'Título da notícia 01',
-      subtitle: 'Subtítulo da notícia 01',
-      likes: 15,
-    },
-    {
-      id: 2,
-      title: 'Título da notícia 02',
-      subtitle: 'Subtítulo da notícia 02',
-      likes: 20,
-    },
-    {
-      id: 3,
-      title: 'Título da notícia 03',
-      subtitle: 'Subtítulo da notícia 03',
-      likes: 30,
-    },
-  ];
+const posts = [
+  {
+    title: 'Título da notícia 01',
+    subtitle: 'Subtítulo da notícia 01',
+    likes: 15,
+  },
+  {
+    title: 'Título da notícia 02',
+    subtitle: 'Subtítulo da notícia 02',
+    likes: 20,
+  },
+  {
+    title: 'Título da notícia 03',
+    subtitle: 'Subtítulo da notícia 03',
+    likes: 30,
+  },
+];
 
+export function App() {
   return (
     <>
       <Header title="Blog do Brendo">
@@ -33,9 +30,9 @@ export function App() {
 
       <hr />
 
-      {posts.map((post) => (
+      {posts.map((post, index) => (
         <Post
-          key={post.id}
+          key={index}
           post={{
             title: post.title,
             subtitle: post.subtitle,
