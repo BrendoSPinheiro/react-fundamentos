@@ -7,21 +7,24 @@ export function App() {
   const [posts, setPosts] = useState([
     {
       id: Math.random(),
-      title: 'Título da notícia 01',
-      subtitle: 'Subtítulo da notícia 01',
+      title: 'Título#01',
+      subtitle: 'Subtítulo#01',
       likes: 15,
+      read: false,
     },
     {
       id: Math.random(),
-      title: 'Título da notícia 02',
-      subtitle: 'Subtítulo da notícia 02',
+      title: 'Título#02',
+      subtitle: 'Subtítulo#02',
       likes: 20,
+      read: false,
     },
     {
       id: Math.random(),
-      title: 'Título da notícia 03',
-      subtitle: 'Subtítulo da notícia 03',
+      title: 'Título#03',
+      subtitle: 'Subtítulo#03',
       likes: 30,
+      read: false,
     },
   ]);
 
@@ -37,6 +40,10 @@ export function App() {
     ]);
   }
 
+  function handleRemovePost(postId) {
+    setPosts((prevState) => prevState.filter((post) => post.id !== postId));
+  }
+
   return (
     <>
       <Header title="Blog do Brendo">
@@ -49,14 +56,7 @@ export function App() {
       <hr />
 
       {posts.map((post) => (
-        <Post
-          key={post.id}
-          post={{
-            title: post.title,
-            subtitle: post.subtitle,
-          }}
-          likes={post.likes}
-        />
+        <Post key={post.id} onRemove={handleRemovePost} post={post} />
       ))}
     </>
   );
