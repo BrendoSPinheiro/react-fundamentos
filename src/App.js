@@ -43,6 +43,7 @@ export function App() {
         title: `Título#0${prevState.length + 1}`,
         subtitle: `Subtítulo#0${prevState.length + 1}`,
         likes: 30,
+        read: false,
       },
     ]);
   }
