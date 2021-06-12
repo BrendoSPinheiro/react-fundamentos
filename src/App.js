@@ -17,7 +17,7 @@ export function App() {
       title: 'Título#02',
       subtitle: 'Subtítulo#02',
       likes: 20,
-      read: false,
+      read: true,
     },
     {
       id: Math.random(),
@@ -25,6 +25,13 @@ export function App() {
       subtitle: 'Subtítulo#03',
       likes: 30,
       read: false,
+    },
+    {
+      id: Math.random(),
+      title: 'Título#04',
+      subtitle: 'Subtítulo#04',
+      likes: 30,
+      read: true,
     },
   ]);
 

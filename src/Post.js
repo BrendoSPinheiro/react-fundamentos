@@ -5,7 +5,9 @@ export function Post(props) {
   return (
     <>
       <article>
-        <strong>{props.post.title}</strong>
+        <strong>
+          {props.post.read ? <s>{props.post.title}</s> : props.post.title}
+        </strong>
         <button onClick={() => props.onRemove(props.post.id)}>Remover</button>
         <br />
         <small>{props.post.subtitle}</small>
