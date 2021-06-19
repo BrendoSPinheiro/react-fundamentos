@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 
+import { ThemeProvider } from './ThemeContext';
+
 import { Post } from './Post';
 import { Header } from './Header';
+import { Button } from './Button';
 
 export function App() {
   const [posts, setPosts] = useState([
@@ -53,11 +56,11 @@ export function App() {
   }
 
   return (
-    <>
-      <Header title="Blog do Brendo">
+    <ThemeProvider>
+      <Header>
         <h2>
           Posts da semana
-          <button onClick={handleAddNewPost}>Novo Post</button>
+          <Button onClick={handleAddNewPost}>Novo Post</Button>
         </h2>
       </Header>
 
@@ -66,6 +69,6 @@ export function App() {
       {posts.map((post) => (
         <Post key={post.id} onRemove={handleRemovePost} post={post} />
       ))}
-    </>
+    </ThemeProvider>
   );
 }
